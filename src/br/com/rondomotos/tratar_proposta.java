@@ -43,103 +43,82 @@ public class tratar_proposta {
 					switch (linhasLer[3]) {
 					case "CARTÃO":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
-						if (!obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
-							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-												Double.parseDouble(linhasLer[7])));
-							}
-							break;
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
+											Double.parseDouble(linhasLer[7])));
 
 						}
+						break;
+
 					}
+
 					switch (linhasLer[3]) {
 					case "DINHEIRO":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
-						if (!obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
-							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-							}
-							break;
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
+											Double.parseDouble(linhasLer[7])));
 
 						}
+						break;
+
 					}
+
 					switch (linhasLer[3]) {
 					case "A RECEBER CHEQUE A VISTA":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
-						if (!obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
-							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-							}
-							break;
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
+											Double.parseDouble(linhasLer[7])));
 
 						}
+						break;
+
 					}
+
 					switch (linhasLer[3]) {
 					case "FINANCIAMENTO":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
-						if (!obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
-							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-							}
-							break;
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
+											Double.parseDouble(linhasLer[7])));
 
 						}
+						break;
+
 					}
 					switch (linhasLer[3]) {
 					case "DEPÓSITO BANCÁRIO":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
-						if (!obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
-							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-							}
-							break;
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
+											Double.parseDouble(linhasLer[7])));
 
 						}
+						break;
+
 					}
+
 					switch (linhasLer[3]) {
 					case "CONSÓRCIO":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
@@ -147,14 +126,19 @@ public class tratar_proposta {
 								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
 							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+								String teste = linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
 										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
+										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
+												Double.parseDouble(linhasLer[7]));
+								String[] linhasLerCompleta = teste.split(";");
+								if (linhasLerCompleta[10].equals("RONDO MOTOS LTDA")) {
+
+								} else {
+									temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+											+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+											+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]),
+													0, Double.parseDouble(linhasLer[7])));
+								}
 							}
 							break;
 
@@ -163,124 +147,114 @@ public class tratar_proposta {
 					switch (linhasLer[3]) {
 					case "TROCA DE VEÍCULO":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
-						if (!obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
-							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-							}
-							break;
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
+											Double.parseDouble(linhasLer[7])));
 
 						}
+						break;
+
 					}
+
 					switch (linhasLer[3]) {
 					case "FINANCIAMENTO PRÓPRIO":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
-						if (!obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
-							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-												Double.parseDouble(linhasLer[7])));
-							}
-							break;
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
+											Double.parseDouble(linhasLer[7])));
 
 						}
+						break;
+
 					}
+
 					switch (linhasLer[3]) {
 					case "CARTÃO DÉBITO":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
-						if (!obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
-							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-							}
-							break;
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
+											Double.parseDouble(linhasLer[7])));
 
 						}
+						break;
+
 					}
+
 					switch (linhasLer[3]) {
 					case "PERMUTA":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
-						if (!obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
-							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
-												Double.parseDouble(linhasLer[7])));
-							}
-							break;
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 0,
+											Double.parseDouble(linhasLer[7])));
 
 						}
+						break;
+
 					}
+
 					switch (linhasLer[3]) {
-					case "DUPLICATA MERCANTIL":
+					case "DUPLICATA MERCATIL":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
-						if (!obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
-							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-												Double.parseDouble(linhasLer[7])));
-							}
-							break;
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
+											Double.parseDouble(linhasLer[7])));
 
 						}
+						break;
+
 					}
+
 					switch (linhasLer[3]) {
 					case "A RECEBER CHEQUE":
 						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
-						if (!obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-								Double.parseDouble(linhasLer[7])).contentEquals("nada")) {
-							if (linhasLer[6].equals("False")) {
 
-								temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-												Double.parseDouble(linhasLer[7])));
-								System.out.println(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
-										+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
-										+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
-												Double.parseDouble(linhasLer[7])));
-							}
-							break;
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
+											Double.parseDouble(linhasLer[7])));
 
 						}
-					}
+						break;
 
+					}
+					
+					switch (linhasLer[3]) {
+					case "A RECEBER CHEQUE - ALIENAÇÃO":
+						linhasLer[7] = linhasLer[7].replaceAll(",", ".");
+
+						if (linhasLer[6].equals("False")) {
+
+							temp_proposta.add(linhasLer[2] + ";" + linhasLer[0] + ";" + linhasLer[3] + ";"
+									+ linhasLer[1] + ";" + linhasLer[5] + ";" + linhasLer[4] + ";"
+									+ obterValorTabela.valorTabela(linhasLer[1], Integer.parseInt(linhasLer[4]), 1,
+											Double.parseDouble(linhasLer[7])));
+
+						}
+						break;
+
+					}
 				}
 			}
 			br.close();

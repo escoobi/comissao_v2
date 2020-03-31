@@ -30,7 +30,7 @@ public class check_vendedor {
 		} catch (Exception e) {
 			// TODO: handle exception
 			if (e.getMessage().contains("O sistema não pode encontrar o arquivo especificado"))
-				
+
 			{
 
 				try {
@@ -52,15 +52,13 @@ public class check_vendedor {
 	public static void lerVendedorProposta() {
 
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("c:\\comissao\\Saída - SAÍDA - COMISSAO - PROGRAMA EXTERNO TABELA.csv"));
+			BufferedReader br = new BufferedReader(
+					new FileReader("c:\\comissao\\Saída - SAÍDA - COMISSAO - PROGRAMA EXTERNO TABELA.csv"));
 			while ((minhaLinha = br.readLine()) != null) {
 				minhaLinha = minhaLinha.replaceAll("\"", ""); // Utilizado Código Regex para
 				// remover aspa dupla.
 				String[] linhasLer = minhaLinha.split(";");
 
-				
-				
-				
 				if (!check_vendedor.lerVendedor(linhasLer[6])) {
 
 					addVendedor.lerVendedor();
@@ -76,9 +74,11 @@ public class check_vendedor {
 						addVendedor.add(linhasLer[6] + ";INTERNO;" + linhasLer[8]);
 						System.out.println(linhasLer[6] + ";INTERNO;" + linhasLer[8]);
 					} else {
+						if (!linhasLer[6].equals("RONDO MOTOS LTDA")) {
 
-						addVendedor.add(linhasLer[6] + ";EXTERNO;" + linhasLer[8]);
-						System.out.println(linhasLer[6] + ";EXTERNO;" + linhasLer[8]);
+							addVendedor.add(linhasLer[6] + ";EXTERNO;" + linhasLer[8]);
+						
+						}
 					}
 
 				}
