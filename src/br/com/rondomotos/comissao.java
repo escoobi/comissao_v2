@@ -1,8 +1,11 @@
 package br.com.rondomotos;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
+
+import javax.swing.JFileChooser;
 
 public class comissao {
 
@@ -137,7 +140,9 @@ public class comissao {
 
 		try {
 			@SuppressWarnings("resource")
-			BufferedReader br = new BufferedReader((new FileReader("c:\\comissao\\vendedor.csv")));
+			
+	        
+			BufferedReader br = new BufferedReader((new FileReader(main.arquivo+"//vendedor.csv")));
 			alistVP = new ArrayList<>();
 
 			while ((linha = br.readLine()) != null) {

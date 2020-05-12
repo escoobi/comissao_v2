@@ -1,7 +1,10 @@
 package br.com.rondomotos;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+
+import javax.swing.JFileChooser;
 
 public class obterValorTabela {
 
@@ -10,12 +13,12 @@ public class obterValorTabela {
 	public static String valorTabela(String proposta, int parcela, int x, double valor) {
 		try {
 			config_localidade.configLocalidade();
-
+		
 			BufferedReader br = new BufferedReader(
-					new FileReader("c:\\comissao\\Saída - SAÍDA - COMISSAO - PROGRAMA EXTERNO TABELA.csv"));
+					new FileReader(main.arquivo+"//Saída - SAÍDA - COMISSAO - PROGRAMA EXTERNO TABELA.csv"));
 			while ((minhaLinha = br.readLine()) != null) {
 
-				minhaLinha = minhaLinha.replaceAll("\"", ""); // Utilizado Código Regex para
+				minhaLinha = minhaLinha.replaceAll("\"", ""); // Utilizado Cï¿½digo Regex para
 																// remover aspa dupla.
 
 				String[] linhasLer = minhaLinha.split(";");

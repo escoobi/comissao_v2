@@ -9,17 +9,21 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.swing.JFileChooser;
+
 public class addVendedor {
-	
+
 	public static String linha;
-	
+
 	public static FileWriter escreve;
 	public static BufferedWriter bw;
 	public static ArrayList<String> alistVP;
+
 	public static void lerVendedor() {
 
 		try {
-			BufferedReader br = new BufferedReader((new FileReader("c:\\comissao\\vendedor.csv")));
+
+			BufferedReader br = new BufferedReader((new FileReader(main.arquivo + "//vendedor.csv")));
 			alistVP = new ArrayList<>();
 			try {
 				while ((linha = br.readLine()) != null) {
@@ -36,20 +40,27 @@ public class addVendedor {
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			try {
+				File novoArqLote = new File(main.arquivo + "//vendedor.csv");
+				novoArqLote.createNewFile();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
+
 	}
-	
-	
+
 	public static void add(String vendedor) {
-	
+
 		try {
-			File novoArqLote = new File("c:\\comissao\\vendedor.csv");
+
+			File novoArqLote = new File(main.arquivo + "//vendedor.csv");
 			novoArqLote.createNewFile();
 			escreve = new FileWriter(novoArqLote);
 			BufferedWriter bw = new BufferedWriter(escreve);
 			alistVP.add(vendedor);
-			for(String linha : alistVP) {
+			for (String linha : alistVP) {
 				bw.write(linha);
 				bw.newLine();
 			}
@@ -58,6 +69,6 @@ public class addVendedor {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 }

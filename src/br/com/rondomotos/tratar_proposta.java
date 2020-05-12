@@ -1,10 +1,12 @@
 package br.com.rondomotos;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 
 import java.util.ArrayList;
 
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 public class tratar_proposta {
@@ -18,15 +20,17 @@ public class tratar_proposta {
 
 			config_localidade.configLocalidade();
 
+		
+			
 			BufferedReader br = new BufferedReader(new FileReader(
-					"c:\\comissao\\Proposta de Venda - PROPOSTA DE VENDA - RELATÓRIO COMISSÃO SISTEMA EXTERNO.csv"));
+					main.arquivo+"//Proposta de Venda - PROPOSTA DE VENDA - RELATÓRIO COMISSÃO SISTEMA EXTERNO.csv"));
 			temp_proposta = new ArrayList<String>();
 			temp_proposta.add(
 					"NF;CLIENTE;RECEBIMENTO;PROPOSTA;MODELO;PARCELAS;DESCONTO;VALOR PRESENTE;VALOR VENDA;TABELA;VENDEDOR;TIPO;CIDADE");
 
 			while ((minhaLinha = br.readLine()) != null) {
-				minhaLinha = minhaLinha.replaceAll("\"", ""); // Utilizado Código Regex para remover aspa dupla.
-				minhaLinha = minhaLinha.replaceAll("\";", ""); // Utilizado Código Regex para remover espaços.
+				minhaLinha = minhaLinha.replaceAll("\"", ""); // Utilizado Cï¿½digo Regex para remover aspa dupla.
+				minhaLinha = minhaLinha.replaceAll("\";", ""); // Utilizado Cï¿½digo Regex para remover espaï¿½os.
 				String[] linhasLer = minhaLinha.split(";");
 
 				switch (linhasLer[0]) {

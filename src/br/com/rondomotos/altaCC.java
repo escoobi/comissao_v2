@@ -1,7 +1,10 @@
 package br.com.rondomotos;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+
+import javax.swing.JFileChooser;
 
 public class altaCC {
 	public static String minhaLinha = "";
@@ -9,9 +12,10 @@ public class altaCC {
 	public static boolean carregar(String modelo) {
 		try {
 			@SuppressWarnings("resource")
-			BufferedReader br = new BufferedReader(new FileReader("c:\\comissao\\modelos.csv"));
+		
+			BufferedReader br = new BufferedReader(new FileReader(main.arquivo+"//modelos.csv"));
 			while ((minhaLinha = br.readLine()) != null) {
-				minhaLinha = minhaLinha.replaceAll("\"", ""); // Utilizado Código Regex para
+				minhaLinha = minhaLinha.replaceAll("\"", ""); // Utilizado Cï¿½digo Regex para
 				// remover aspa dupla.
 				String[] linhasLer = minhaLinha.split(";");
 				if (linhasLer[0].equals(modelo)) {
